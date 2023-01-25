@@ -39,9 +39,9 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLi
     // 4. 三角形の頂点バッファを作成
     // 頂点配列を定義
     SimpleVertex vertices[] = {
-        { -0.5f, -0.5f, 0.0f },
-        { 0.0f, 0.5f, 0.0f },
-        { 0.5f, -0.5f, 0.0f },
+        { -0.5f, 0.5f},
+        { -0.5f, -0.5f},
+        { 0.5f, -0.5f},
     };
 
     VertexBuffer triangleVB;
@@ -88,7 +88,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLi
         renderContext.SetIndexBuffer(triangleIB);
 
         // 6. ドローコール
-        renderContext.DrawIndexed(3);
+        renderContext.DrawIndexed(6);
 
         /////////////////////////////////////////
         // 絵を描くコードを書くのはここまで！！！
