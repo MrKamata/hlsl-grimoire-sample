@@ -30,8 +30,8 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLi
 
     // 2. シェーダーをロード
     Shader vs, ps;
-    vs.LoadVS("Assets/shader/sample.fx", "VSMain");
-    ps.LoadPS("Assets/shader/sample.fx", "PSMain");
+    vs.LoadVS("Assets/shader/sample.after_4.fx", "VSMain");
+    ps.LoadPS("Assets/shader/sample.after_4.fx", "PSMain");
 
     // 3. パイプラインステートを作成
     PipelineState pipelineState;
@@ -105,12 +105,12 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLi
 }
 
 // ルートシグネチャの初期化
-void InitRootSignature( RootSignature& rs )
+void InitRootSignature(RootSignature& rs)
 {
     rs.Init(D3D12_FILTER_MIN_MAG_MIP_LINEAR,
-            D3D12_TEXTURE_ADDRESS_MODE_WRAP,
-            D3D12_TEXTURE_ADDRESS_MODE_WRAP,
-            D3D12_TEXTURE_ADDRESS_MODE_WRAP);
+        D3D12_TEXTURE_ADDRESS_MODE_WRAP,
+        D3D12_TEXTURE_ADDRESS_MODE_WRAP,
+        D3D12_TEXTURE_ADDRESS_MODE_WRAP);
 }
 
 // パイプラインステートの初期化
